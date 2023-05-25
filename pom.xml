@@ -198,6 +198,17 @@
                         <goals>
                             <goal>enforce</goal>
                         </goals>
+                        <configuration>
+                            <rules>
+                                <requireMavenVersion>
+                                    <version>[3.6.0,)</version>
+                                </requireMavenVersion>
+                                <requireReleaseDeps>
+                                    <onlyWhenRelease>true</onlyWhenRelease>
+                                    <message>[!] Release builds must not have snapshot dependencies.</message>
+                                </requireReleaseDeps>
+                            </rules>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
